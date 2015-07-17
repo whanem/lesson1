@@ -16,3 +16,15 @@ function sql_insert($query){
         return true;
     else return false;
 }
+function sql_query($query){
+    $data_DB = [];
+    $sql_query = mysql_query($query);
+
+    while( false !== $q = mysql_fetch_assoc($sql_query) ){
+       $data_DB[] = $q;
+    }
+    $sql_error = mysql_error();
+    if( strlen($sql_error) == 0  )
+        return $data_DB;
+    else return false;
+}
