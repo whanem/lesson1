@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="view/css/style.css"/>
 </head>
 <body>
+    <p><a href="index.php">...назад на главную</a></p>
     <h2>Добавить статью</h2>
     <p class="msg_error"><?php echo $msg_error;?></p>
     <form action="add.php" method="post">

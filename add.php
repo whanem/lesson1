@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/model/sqlQueryInsert.php';
+require __DIR__ . '/model/sqlQuery.php';
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     $title = $_POST['title'];

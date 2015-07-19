@@ -12,8 +12,17 @@ function article_sql_add($title, $article)
     return $sql_query;
 }
 
-function article_sql_query(){
+function articles_sql_query(){
     $query = 'SELECT * FROM News';
+
+    if( $query !== false )
+        return $data_DB = sql_query($query);
+    else return false;
+}
+
+function article_get($id_article){
+    sql_connect();
+    $query = 'SELECT * FROM News WHERE id_article = "'. $id_article .'"';
 
     if( $query !== false )
         return $data_DB = sql_query($query);

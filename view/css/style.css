@@ -13,3 +13,6 @@ body{
     text-decoration: none;
     font: 17px sans-serif;
 }
+.article_title{
+    font: 600 17px sans-serif;
+}
