@@ -36,3 +36,11 @@ function sql_update($query){
         return $sql_query;
     else return false;
 }
+function sql_delete($query){
+    mysql_query($query);
+
+    $sql_error = mysql_error();
+    if( strlen($sql_error) == 0  )
+        return true;
+    else return false;
+}

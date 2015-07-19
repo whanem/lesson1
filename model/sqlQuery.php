@@ -42,3 +42,13 @@ function article_update($id, $title, $article){
         return true;
     else return false;
 }
+function article_delete($id_article){
+    sql_connect();
+    $query = 'DELETE FROM News WHERE id_article = "'. $id_article .'"';
+
+    $query = sql_delete($query);
+    if( false !== $query )
+        return true;
+    else return false;
+
+}
