@@ -28,3 +28,11 @@ function sql_query($query){
         return $data_DB;
     else return false;
 }
+function sql_update($query){
+    $sql_query = mysql_query($query);
+
+    $sql_error = mysql_error();
+    if( strlen($sql_error) == 0  )
+        return $sql_query;
+    else return false;
+}
